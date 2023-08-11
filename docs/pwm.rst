@@ -82,13 +82,13 @@ the data if ``sync`` is not specified or set to ``true``.
 size_t write(const uint8_t \*buffer, size_t size)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Transfers number of bytes from an application buffer to the PWM Audio output buffer.
-Be aware that ``size`` is in *bytes** and not samples.  Size must be a multiple
-of **4 bytes**.  Will not block, so check the return value to find out how
+Be aware that ``size`` is in **bytes** and not samples.  Size must be a multiple
+of **2 bytes**.  Will not block, so check the return value to find out how
 many bytes were actually written.
 
 int availableForWrite()
 ~~~~~~~~~~~~~~~~~~~~~~~
-Returns the number of samples that can be written without potentially blocking.
+Returns the number of **bytes** that can be written without potentially blocking.
 
 void onTransmit(void (\*fn)(void))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

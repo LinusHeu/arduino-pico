@@ -106,7 +106,7 @@ void getOverUnderflow()
 Returns a flag indicating if the I2S system ran our of data to send on output,
 or had to throw away data on input.
 
-size_t write(uint8_t/int8_t/int16_t/int32_t)
+size_t write(uint8_t/int8_t/uint16_t/int16_t/uint32_t/int32_t)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Writes a single sample of ``bitsPerSample`` to the buffer.  It is up to the
 user to keep track of left/right channels.   Note this writes data equivalent
